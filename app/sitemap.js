@@ -1,0 +1,1 @@
+export default function sitemap(){const base='https://yardfixguide.com';const pages=['','lawn-care','lawn-diseases','garden-pests','plant-diseases','seasonal-care','winterization','about','contact'];return pages.map(p=>({url:base+(p?'/'+p:''),lastModified:new Date(),changeFrequency:p?'weekly':'daily',priority:p?0.8:1}))}
