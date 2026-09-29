@@ -2,7 +2,7 @@ const guides=[
 {title:"Lawn Care",desc:"Mowing, watering, fertilizing and a healthier lawn.",href:"/lawn-care",img:"https://yardyum.com/storage/app/media/22794.jpg",icon:"🌱",tone:"mint"},
 {title:"Lawn Diseases",desc:"Identify and treat common lawn problems.",href:"/lawn-diseases",img:"https://myelitelawncare.com/media/images/imported/2022/08/elite-lawn-care-common-lawn-disease-07.jpg?width=1920",icon:"●",tone:"sand"},
 {title:"Garden Pests",desc:"Stop pests and protect your plants.",href:"/garden-pests",img:"https://botanix.com/cdn/shop/articles/Scarabee_Japonais_e78286a5-a2d5-4abf-b5c3-4edd171f7ff4.jpg?v=1783956229",icon:"🐞",tone:"rose"},
-{title:"Plant Diseases",desc:"Diagnose and treat plant diseases.",href:"/plant-diseases",img:"https://www.koppert.gr/content/_processed_/9/6/csm_powdery_mildew_cucumber_damage_5_koppert_41bbb6e845.jpg",icon:"◆",tone:"lavender"},
+{title:"Plant Diseases",desc:"Diagnose and treat plant diseases.",href:"/plant-diseases",img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Powdery%20mildew%20on%20maple%20leaf.jpg?width=800",icon:"◆",tone:"lavender"},
 {title:"Seasonal Care",desc:"Spring, summer, fall and winter yard tips.",href:"/seasonal-care",img:"https://ik.imagekit.io/tvlk/blog/2022/02/Keukenhof-2.jpg?tr=q-70%2Cc-at_max%2Cw-1000%2Ch-600",icon:"❄",tone:"blue"}
 ];
 export default function Home(){return <main className="homePage">
