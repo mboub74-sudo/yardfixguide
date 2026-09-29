@@ -2,3 +2,17 @@
 .seoArticle{max-width:900px}.articleCrumb{font-size:13px;margin-bottom:24px;color:#64756a}.articleCrumb a{color:#246640;text-decoration:none}.articleLead{font-size:19px!important;line-height:1.65!important}.articleHero,.articleInline{width:100%;height:430px;object-fit:cover;border-radius:18px;margin:24px 0;display:block}.articleInline{height:360px}.seoArticle .answer{margin:30px 0}.seoArticle .answer strong{font-size:19px}.seoArticle section{margin-top:34px}.articleSources{margin-top:44px;padding:22px;background:#f1f7ed;border-radius:14px}.categoryArticle{display:block;margin-top:35px;padding:30px;background:#f1f7ed;border-radius:18px;text-decoration:none;color:var(--ink);border:1px solid #dfebd9}.categoryArticle span{font-size:11px;font-weight:900;letter-spacing:1.4px;color:#237348}.categoryArticle h2{margin:9px 0 18px}.categoryArticle b{color:#12643b}@media(max-width:700px){.articleHero,.articleInline{height:260px}.articleLead{font-size:17px!important}}
 
 .categoryArticleVisual{padding:0;overflow:hidden;display:grid;grid-template-columns:42% 58%;align-items:stretch}.categoryArticleVisual>img{width:100%;height:100%;min-height:260px;object-fit:cover}.categoryArticleVisual>div{padding:32px}.categoryArticleVisual p{margin:0 0 20px;line-height:1.6;color:#53645a}@media(max-width:700px){.categoryArticleVisual{grid-template-columns:1fr}.categoryArticleVisual>img{height:220px;min-height:0}.categoryArticleVisual>div{padding:24px}}
+
+/* Recent posts */
+.recentSection{max-width:1180px;margin:0 auto;padding:20px 24px 72px}
+.recentGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.recentCard{display:block;background:#fff;border:1px solid #dfe8df;border-radius:18px;overflow:hidden;text-decoration:none;color:#123f2b;box-shadow:0 8px 24px rgba(20,65,42,.06);transition:transform .2s ease,box-shadow .2s ease}
+.recentCard:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,65,42,.12)}
+.recentImage{height:150px;overflow:hidden;background:#edf4eb}
+.recentImage img{width:100%;height:100%;object-fit:cover;display:block}
+.recentBody{padding:18px}
+.recentCategory{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#26804d;margin-bottom:9px}
+.recentCard h3{font-size:18px;line-height:1.28;margin:0 0 16px;color:#103f2a}
+.recentCard span{font-size:14px;font-weight:750;color:#167443}
+@media(max-width:1000px){.recentGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.recentGrid{grid-template-columns:1fr}.recentImage{height:210px}}
