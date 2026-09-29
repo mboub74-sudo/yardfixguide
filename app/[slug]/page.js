@@ -1,12 +1,11 @@
-import {notFound} from 'next/navigation';
-const data={
-'lawn-care':['Lawn Care','A healthier lawn starts with the basics','Practical guides for mowing, watering, fertilizing, aeration, overseeding and weed control.'],
-'lawn-diseases':['Lawn Diseases','Identify lawn problems before you treat them','Learn the signs, causes and practical treatment options for common turf diseases in the USA and Canada.'],
-'garden-pests':['Garden Pests','Protect your garden from common pests','Identification and control guides for grubs, aphids, Japanese beetles and other yard pests.'],
-'plant-diseases':['Plant Diseases','Spot plant disease symptoms early','Understand common fungal and bacterial symptoms and what to do next.'],
-'seasonal-care':['Seasonal Care','The right yard task at the right time','Spring, summer, fall and winter checklists adapted to seasonal yard needs.'],
-'winterization':['Winterization','Prepare your yard for freezing weather','Protect irrigation systems, lawns, trees and outdoor containers before winter.'],
-'about':['About YardFixGuide','Smarter Lawn & Garden Solutions','YardFixGuide publishes clear, practical lawn and garden guidance for homeowners across the United States and Canada.'],
-'contact':['Contact','Get in touch with YardFixGuide','Questions, corrections or feedback? Contact the YardFixGuide editorial team.']
-};
-export default async function Page({params}){const {slug}=await params;const d=data[slug];if(!d)notFound();return <main className="article"><div className="eyebrow">YARDFIXGUIDE</div><h1>{d[0]}</h1><div className="answer"><strong>{d[1]}</strong><p>{d[2]}</p></div><h2>What you’ll find here</h2><p>Our guides focus on identifying symptoms, understanding likely causes, choosing sensible step-by-step solutions, and preventing the problem from returning.</p><h2>Built for real seasonal conditions</h2><p>Recommendations consider the very different growing seasons, heat, rainfall and freezing conditions homeowners encounter across the USA and Canada.</p></main>}
+const pages={
+"lawn-care":{title:"Lawn Care",desc:"Mowing, watering, fertilizing, seeding and practical lawn maintenance.",article:["Fall Lawn Care Checklist 2026: Seed, Aerate and Feed at the Right Time","/lawn-care/fall-lawn-care-checklist-2026"]},
+"lawn-diseases":{title:"Lawn Diseases",desc:"Identify common turf diseases and learn practical ways to help your lawn recover.",article:["Lawn Rust in Fall: How to Identify Orange Grass and Fix It","/lawn-diseases/how-to-identify-lawn-rust-in-fall"]},
+"garden-pests":{title:"Garden Pests",desc:"Identify garden pests and protect plants with practical prevention strategies.",article:["Fall Garden Pests 2026: Yellowjackets, Boxelder Bugs and What to Do","/garden-pests/fall-garden-pests-yellowjackets-boxelder-bugs"]},
+"plant-diseases":{title:"Plant Diseases",desc:"Diagnose common plant diseases and learn prevention and treatment basics.",article:["Powdery Mildew on Plants: How to Identify, Treat and Prevent It","/plant-diseases/how-to-treat-powdery-mildew-on-plants"]},
+"seasonal-care":{title:"Seasonal Care",desc:"Timely yard and garden tasks for spring, summer, fall and winter.",article:["Fall Yard Cleanup Checklist 2026: What to Do Before Winter","/seasonal-care/fall-yard-cleanup-checklist-2026"]},
+"winterization":{title:"Winterization",desc:"Prepare lawns, gardens and outdoor plants for freezing weather.",article:["How to Protect Outdoor Potted Plants From Frost and Winter Cold","/winterization/how-to-protect-outdoor-potted-plants-from-frost"]},
+"about":{title:"About YardFixGuide",desc:"Practical lawn and garden problem-solving guides for homeowners across the U.S. and Canada."},
+"contact":{title:"Contact",desc:"Contact YardFixGuide about our lawn and garden guides."}};
+export async function generateMetadata({params}){const p=await params,d=pages[p.slug];return d?{title:d.title+" | YardFixGuide",description:d.desc}:{}}
+export default async function Page({params}){const p=await params,d=pages[p.slug];if(!d)return <main className="article"><h1>Page not found</h1></main>;return <main className="article categoryPage"><div className="eyebrow">YARDFIXGUIDE</div><h1>{d.title}</h1><p className="articleLead">{d.desc}</p>{d.article&&<a className="categoryArticle" href={d.article[1]}><span>NEW GUIDE • SEPTEMBER 2026</span><h2>{d.article[0]}</h2><b>Read the guide →</b></a>}</main>}
